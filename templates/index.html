@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 {% endblock %}
 
-{% block title %}My Top 10 Movies{% endblock %}
+{% block title %}My Top {{ movies | length }} Movies{% endblock %}
 
 {% block content %}
 <div class="container">
-  <h1 class="heading">My Top 10 Movies</h1>
+  <h1 class="heading">My Top {{ movies | length }} Movies</h1>
   <p class="description">These are my all time favourite movies.</p>
    {%  if movies|count == 0 %}
     <p>Movie Collection is empty.</p>
